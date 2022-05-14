@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     } else if (provider.isConnected &&
                         !provider.isInOperatingChain) {
                       text =
-                          "Wrong chain. PLease connect to ${MetaMaskProvider.operatingChain}";
+                          "Wrong chain. Please connect to ${MetaMaskProvider.operatingChain}";
                     } else if (provider.isEnabled) {
                       return Column(
                         mainAxisSize: MainAxisSize.min,
