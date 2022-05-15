@@ -1,3 +1,3 @@
 # dart-web3
 
-🚀 Development of dApps. 🏃🏾 Running with Ethereum and Solidity.
+🚀 Development of mobile dApps with Ethereum and Solidity.
