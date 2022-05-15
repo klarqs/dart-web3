@@ -4,4 +4,5 @@ Integrating MetaMask into a Flutter application.
 
 
 #### Dependencies: 
+- https://pub.dev/packages/provider
 - https://pub.dev/packages/flutter_web3
