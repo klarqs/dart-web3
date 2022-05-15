@@ -55,7 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           const Text('Click the button...'),
                           const SizedBox(height: 8),
                           CupertinoButton(
-                            onPressed: () => context.read<MetaMaskProvider> ().connect(),
+                            onPressed: () =>
+                                context.read<MetaMaskProvider>().connect(),
                             color: Colors.white,
                             padding: const EdgeInsets.all(0),
                             child: Row(
@@ -81,6 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Text(
                         text,
                         textAlign: TextAlign.center,
+                        style: const TextStyle(fontSize: 24),
                       ),
                     );
                   }),
