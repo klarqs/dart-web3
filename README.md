@@ -1,3 +1,3 @@
 # dart-web3
 
-🚀 Development of mobile dApps with Ethereum and Solidity.
+🚀 Note! This repository includes mobile/browser frontend development of dapps with Ethereum and Solidity.
