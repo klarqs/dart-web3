@@ -150,10 +150,10 @@ class _NormalTextFieldState extends State<NormalTextField> {
             color: hintTextColor,
           ),
           hintStyle: bodyText6.copyWith(
-            fontSize: 12,
+            fontSize: 13,
             color: hintTextColor,
-            fontWeight: FontWeight.w600,
-            letterSpacing: 1.1,
+            fontWeight: FontWeight.w500,
+            // letterSpacing: 1.1,
           ),
           enabledBorder: _border(textFieldBorderColor),
           focusedBorder: _border(apacePrimaryColor),

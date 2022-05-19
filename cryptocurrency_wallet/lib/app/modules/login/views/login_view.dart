@@ -1,4 +1,3 @@
-import 'package:cryptocurrency_wallet/app/modules/login/views/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -6,15 +5,16 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../components/custom_text_button.dart';
 import '../../../components/custom_text_field.dart';
 import '../../onboarding/views/widgets/onboarding_elements.dart';
+import '../../register/views/register_view.dart';
 
-class Register extends StatefulWidget {
-  const Register({Key? key}) : super(key: key);
+class Login extends StatefulWidget {
+  const Login({Key? key}) : super(key: key);
 
   @override
-  State<Register> createState() => _RegisterState();
+  State<Login> createState() => _LoginState();
 }
 
-class _RegisterState extends State<Register> {
+class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +36,7 @@ class _RegisterState extends State<Register> {
             children: [
               const SizedBox(height: 16.0),
               RobText(
-                'Get Started',
+                'Welcome back',
                 style: GoogleFonts.dmSans(
                   fontSize: 26,
                   fontWeight: FontWeight.w700,
@@ -47,7 +47,7 @@ class _RegisterState extends State<Register> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40.0),
                 child: RobText(
-                  'Create an account to start accepting crypto payments from customers globally',
+                  'Please enter your account details',
                   style: GoogleFonts.dmSans(
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
@@ -63,64 +63,6 @@ class _RegisterState extends State<Register> {
             padding: const EdgeInsets.all(24.0),
             child: Column(
               children: [
-                const SizedBox(height: 16.0),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 8.0),
-                            child: RobText(
-                              'First Name',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w600,
-                                color: const Color(0XFF5B5B60),
-                                height: 1.6,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                          const SizedBox(height: 8.0),
-                          const NormalTextField(
-                            hintText: "Enter first name",
-                            textCapitalization: TextCapitalization.words,
-                            keyboardType: TextInputType.name,
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(width: 16.0),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 8.0),
-                            child: RobText(
-                              'Last Name',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w600,
-                                color: const Color(0XFF5B5B60),
-                                height: 1.6,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                          const SizedBox(height: 8.0),
-                          const NormalTextField(
-                            hintText: "Enter last name",
-                            textCapitalization: TextCapitalization.words,
-                            keyboardType: TextInputType.name,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
                 const SizedBox(height: 16.0),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -143,38 +85,6 @@ class _RegisterState extends State<Register> {
                       hintText: "Enter email address",
                       textCapitalization: TextCapitalization.none,
                       keyboardType: TextInputType.emailAddress,
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 16.0),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8.0),
-                      child: RobText(
-                        'Phone Number',
-                        style: GoogleFonts.dmSans(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600,
-                          color: const Color(0XFF5B5B60),
-                          height: 1.6,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    const SizedBox(height: 8.0),
-                    NormalTextField(
-                      hintText: "Enter phone number",
-                      textCapitalization: TextCapitalization.none,
-                      keyboardType: TextInputType.phone,
-                      prefixIcon: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Image.asset(
-                          'assets/svgs/ngn_flag.png',
-                          height: 10,
-                        ),
-                      ),
                     ),
                   ],
                 ),
@@ -213,7 +123,7 @@ class _RegisterState extends State<Register> {
                         children: [
                           CustomTextButton(
                             onPressed: () {},
-                            buttonText: 'Sign Up',
+                            buttonText: 'Sign in',
                           ),
                         ],
                       ),
@@ -227,16 +137,7 @@ class _RegisterState extends State<Register> {
                           crossAxisAlignment: WrapCrossAlignment.center,
                           children: [
                             Text(
-                              'Already have ',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w300,
-                                color: const Color(0XFF12141F),
-                                height: 1.6,
-                              ),
-                            ),
-                            Text(
-                              'an account? ',
+                              'No account yet? ',
                               style: GoogleFonts.dmSans(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w300,
@@ -250,12 +151,12 @@ class _RegisterState extends State<Register> {
                               onTap: () {
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
-                                    builder: (context) => const Login(),
+                                    builder: (context) => const Register(),
                                   ),
                                 );
                               },
                               child: Text(
-                                'Log in',
+                                'Sign up',
                                 style: GoogleFonts.dmSans(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w700,
