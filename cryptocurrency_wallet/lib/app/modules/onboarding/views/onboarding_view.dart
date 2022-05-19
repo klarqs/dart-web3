@@ -120,7 +120,7 @@ class _OnboardingState extends State<Onboarding> {
                     height: 24,
                   ),
                   SizedBox(
-                    height: screen.height * .4,
+                    height: screen.height * .45,
                     child: PageView(
                       scrollDirection: Axis.horizontal,
                       controller: pageController,

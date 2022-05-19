@@ -14,7 +14,7 @@ Widget OnboardingCard(
 }) {
   var screen = MediaQuery.of(context).size;
   return Container(
-    height: screen.height * .4,
+    height: screen.height * .45,
     margin: const EdgeInsets.symmetric(
       horizontal: 24.0,
     ),
@@ -27,15 +27,6 @@ Widget OnboardingCard(
     child: Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        // Image.asset(
-        //   'assets/image/bitsbull_logo.png',
-        //   width: screen.width / 2 + 30,
-        // ),
-        // Image.network(
-        //   baseUrl + 'banner/' + assetUrl!,
-        //   fit: BoxFit.fill,
-        //   width: screen.width - 30,
-        // ),
         const SizedBox(),
         Column(
           children: [
@@ -78,7 +69,7 @@ Widget WelcomeCard(
 }) {
   var screen = MediaQuery.of(context).size;
   return Container(
-    height: screen.height * .4,
+    height: screen.height * .45,
     margin: const EdgeInsets.symmetric(
       horizontal: 24.0,
     ),
@@ -157,7 +148,7 @@ Widget WelcomeCard(
                 children: [
                   CustomTextButton(
                     onPressed: onPressed,
-                    buttonText: 'Sign Up',
+                    buttonText: 'Create an account',
                   ),
                 ],
               ),

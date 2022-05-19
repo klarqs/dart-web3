@@ -1,4 +1,5 @@
 import 'package:cryptocurrency_wallet/app/modules/onboarding/views/widgets/onboarding_elements.dart';
+import 'package:cryptocurrency_wallet/app/modules/register/views/register_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -53,7 +54,13 @@ class _WelcomeState extends State<Welcome> {
                   ),
                   WelcomeCard(
                     context,
-                    onPressed: () => {},
+                    onPressed: () => {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const Register(),
+                        ),
+                      ),
+                    },
                   ),
                 ],
               ),
