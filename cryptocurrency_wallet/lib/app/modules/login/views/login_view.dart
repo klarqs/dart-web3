@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../components/custom_text_button.dart';
@@ -18,6 +19,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -85,6 +87,7 @@ class _LoginState extends State<Login> {
                       hintText: "Enter email address",
                       textCapitalization: TextCapitalization.none,
                       keyboardType: TextInputType.emailAddress,
+                      textInputAction: TextInputAction.next,
                     ),
                   ],
                 ),
@@ -110,6 +113,7 @@ class _LoginState extends State<Login> {
                       hintText: 'Min. of 8 characters',
                       textCapitalization: TextCapitalization.none,
                       keyboardType: TextInputType.visiblePassword,
+                      textInputAction: TextInputAction.done,
                       isPasswordField: true,
                     ),
                   ],
@@ -149,10 +153,9 @@ class _LoginState extends State<Login> {
                               splashColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (context) => const Register(),
-                                  ),
+                                Get.off(
+                                  () => const Register(),
+                                  transition: Transition.cupertino,
                                 );
                               },
                               child: Text(

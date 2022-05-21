@@ -1,10 +1,12 @@
 import 'package:cryptocurrency_wallet/app/modules/login/views/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../components/custom_text_button.dart';
 import '../../../components/custom_text_field.dart';
+import '../../confirm_otp/views/confirm_otp_view.dart';
 import '../../onboarding/views/widgets/onboarding_elements.dart';
 
 class Register extends StatefulWidget {
@@ -18,6 +20,7 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -88,6 +91,7 @@ class _RegisterState extends State<Register> {
                             hintText: "Enter first name",
                             textCapitalization: TextCapitalization.words,
                             keyboardType: TextInputType.name,
+                            textInputAction: TextInputAction.next,
                           ),
                         ],
                       ),
@@ -115,6 +119,7 @@ class _RegisterState extends State<Register> {
                             hintText: "Enter last name",
                             textCapitalization: TextCapitalization.words,
                             keyboardType: TextInputType.name,
+                            textInputAction: TextInputAction.next,
                           ),
                         ],
                       ),
@@ -143,6 +148,7 @@ class _RegisterState extends State<Register> {
                       hintText: "Enter email address",
                       textCapitalization: TextCapitalization.none,
                       keyboardType: TextInputType.emailAddress,
+                      textInputAction: TextInputAction.next,
                     ),
                   ],
                 ),
@@ -168,6 +174,7 @@ class _RegisterState extends State<Register> {
                       hintText: "Enter phone number",
                       textCapitalization: TextCapitalization.none,
                       keyboardType: TextInputType.phone,
+                      textInputAction: TextInputAction.next,
                       prefixIcon: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: Image.asset(
@@ -201,6 +208,7 @@ class _RegisterState extends State<Register> {
                       textCapitalization: TextCapitalization.none,
                       keyboardType: TextInputType.visiblePassword,
                       isPasswordField: true,
+                      textInputAction: TextInputAction.done,
                     ),
                   ],
                 ),
@@ -212,7 +220,12 @@ class _RegisterState extends State<Register> {
                         direction: Axis.horizontal,
                         children: [
                           CustomTextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.to(
+                                    () => const ConfirmOTP(),
+                                transition: Transition.cupertino,
+                              );
+                            },
                             buttonText: 'Sign Up',
                           ),
                         ],
@@ -248,10 +261,9 @@ class _RegisterState extends State<Register> {
                               splashColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (context) => const Login(),
-                                  ),
+                                Get.off(
+                                      () => const Login(),
+                                  transition: Transition.cupertino,
                                 );
                               },
                               child: Text(

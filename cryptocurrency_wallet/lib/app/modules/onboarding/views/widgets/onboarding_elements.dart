@@ -1,6 +1,7 @@
 import 'package:cryptocurrency_wallet/app/components/custom_text_button.dart';
 import 'package:cryptocurrency_wallet/app/modules/login/views/login_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../components/custom_icon_button.dart';
@@ -184,10 +185,9 @@ Widget WelcomeCard(
                       splashColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const Login(),
-                          ),
+                        Get.to(
+                              () => const Login(),
+                          transition: Transition.cupertino,
                         );
                       },
                       child: Text(

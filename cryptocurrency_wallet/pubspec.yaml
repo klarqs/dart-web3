@@ -16,6 +16,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^2.3.2
   flutter_svg: ^1.0.3
+  open_mail_app: ^0.4.5
+  bot_toast: ^4.0.2
+  get:
 
 dev_dependencies:
   flutter_test:

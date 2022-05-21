@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../constants/colors.dart';
@@ -102,7 +103,7 @@ class _NormalTextFieldState extends State<NormalTextField> {
         textInputAction: widget.textInputAction,
         textCapitalization: widget.textCapitalization,
         enableInteractiveSelection: true,
-        onTap: widget.onTap,
+        onTap: () => FocusScope.of(context).unfocus(),
         onChanged: _onChanged,
         onSaved: widget.onSaved,
         // cursorHeight: .4,
@@ -184,7 +185,7 @@ class PasswordSuffixWidget extends StatelessWidget {
       onTap: onPressed,
       child: SvgPicture.asset(
         obscureText ? 'assets/svgs/eye-slash.svg' : 'assets/svgs/eye.svg',
-        height: 12,
+        height: 10,
       ),
     );
   }
