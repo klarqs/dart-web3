@@ -9,3 +9,4 @@ A decentralized application using flutter.
 - web_socket_channel: ^2.2.0
 - http: ^0.13.4
 - provider: ^6.0.2
+
