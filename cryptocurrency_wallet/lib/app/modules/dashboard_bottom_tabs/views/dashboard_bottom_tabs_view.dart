@@ -1,5 +1,7 @@
 import 'package:cryptocurrency_wallet/app/constants/colors.dart';
 import 'package:cryptocurrency_wallet/app/modules/dashboard_home/views/dashboard_home_view.dart';
+import 'package:cryptocurrency_wallet/app/modules/more/views/more_view.dart';
+import 'package:cryptocurrency_wallet/app/modules/transaction_history/views/transaction_history_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
@@ -30,7 +32,7 @@ class _DashboardBottomTabsState extends State<DashboardBottomTabs> {
     });
     _children.add({
       "title": "Leaderboard",
-      "widget": Container(),
+      "widget": const TransactionHistory(),
     });
     _children.add({
       "title": "Wallet",
@@ -42,7 +44,7 @@ class _DashboardBottomTabsState extends State<DashboardBottomTabs> {
     });
     _children.add({
       "title": "More",
-      "widget": Container(),
+      "widget": const More(),
     });
     _currentIndex = widget.tabIndex;
     super.initState();
@@ -67,14 +69,14 @@ class _DashboardBottomTabsState extends State<DashboardBottomTabs> {
           unselectedLabelStyle: const TextStyle(
             height: 1.8,
             letterSpacing: .1,
-            fontSize: 8,
+            fontSize: 10,
             fontWeight: FontWeight.bold,
             color: Color(0XFFB7B7BF),
           ),
           currentIndex: _currentIndex,
           type: BottomNavigationBarType.fixed,
           selectedLabelStyle: const TextStyle(
-            fontSize: 8,
+            fontSize: 10,
             letterSpacing: .1,
             color: apacePrimaryColor,
             fontWeight: FontWeight.bold,
@@ -83,64 +85,49 @@ class _DashboardBottomTabsState extends State<DashboardBottomTabs> {
           backgroundColor: Colors.white,
           items: [
             BottomNavigationBarItem(
-              icon: Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: SvgPicture.asset(
-                  'assets/svgs/home-2.svg',
-                  color: _currentIndex == 0
-                      ? apacePrimaryColor
-                      : const Color(0xffBDBDC5),
-                ),
+              icon: SvgPicture.asset(
+                'assets/svgs/home-2.svg',
+                color: _currentIndex == 0
+                    ? apacePrimaryColor
+                    : const Color(0xffBDBDC5),
               ),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: SvgPicture.asset(
-                  'assets/svgs/chart.svg',
-                  color: _currentIndex == 1
-                      ? apacePrimaryColor
-                      : const Color(0xffBDBDC5),
-                  height: 22,
-                ),
+              icon: SvgPicture.asset(
+                'assets/svgs/chart.svg',
+                color: _currentIndex == 1
+                    ? apacePrimaryColor
+                    : const Color(0xffBDBDC5),
+                height: 22,
               ),
               label: 'History',
             ),
             BottomNavigationBarItem(
-              icon: Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: SvgPicture.asset(
-                  'assets/svgs/link-2.svg',
-                  height: 20,
-                  color: _currentIndex == 2
-                      ? apacePrimaryColor
-                      : const Color(0xffBDBDC5),
-                ),
+              icon: SvgPicture.asset(
+                'assets/svgs/link-2.svg',
+                height: 20,
+                color: _currentIndex == 2
+                    ? apacePrimaryColor
+                    : const Color(0xffBDBDC5),
               ),
               label: 'Link',
             ),
             BottomNavigationBarItem(
-              icon: Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: SvgPicture.asset(
-                  'assets/svgs/people.svg',
-                  color: _currentIndex == 3
-                      ? apacePrimaryColor
-                      : const Color(0xffBDBDC5),
-                ),
+              icon: SvgPicture.asset(
+                'assets/svgs/people.svg',
+                color: _currentIndex == 3
+                    ? apacePrimaryColor
+                    : const Color(0xffBDBDC5),
               ),
               label: 'Customers',
             ),
             BottomNavigationBarItem(
-              icon: Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: SvgPicture.asset(
-                  'assets/svgs/category.svg',
-                  color: _currentIndex == 4
-                      ? apacePrimaryColor
-                      : const Color(0xffBDBDC5),
-                ),
+              icon: SvgPicture.asset(
+                'assets/svgs/category.svg',
+                color: _currentIndex == 4
+                    ? apacePrimaryColor
+                    : const Color(0xffBDBDC5),
               ),
               label: 'More',
             ),

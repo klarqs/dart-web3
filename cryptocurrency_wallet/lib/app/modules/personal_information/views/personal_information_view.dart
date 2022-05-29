@@ -100,8 +100,8 @@ class PersonalInformation extends StatelessWidget {
                               child: RobText(
                                 'First Name',
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.w600,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w700,
                                   color: const Color(0XFF5B5B60),
                                   height: 1.6,
                                 ),
@@ -133,8 +133,8 @@ class PersonalInformation extends StatelessWidget {
                               child: RobText(
                                 'Last Name',
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.w600,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w700,
                                   color: const Color(0XFF5B5B60),
                                   height: 1.6,
                                 ),
@@ -166,8 +166,8 @@ class PersonalInformation extends StatelessWidget {
                         child: RobText(
                           'Email Address',
                           style: GoogleFonts.dmSans(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w600,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w700,
                             color: const Color(0XFF5B5B60),
                             height: 1.6,
                           ),
@@ -196,8 +196,8 @@ class PersonalInformation extends StatelessWidget {
                         child: RobText(
                           'Phone Number',
                           style: GoogleFonts.dmSans(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w600,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w700,
                             color: const Color(0XFF5B5B60),
                             height: 1.6,
                           ),
@@ -231,8 +231,8 @@ class PersonalInformation extends StatelessWidget {
                         child: RobText(
                           'Password',
                           style: GoogleFonts.dmSans(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w600,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w700,
                             color: const Color(0XFF5B5B60),
                             height: 1.6,
                           ),
@@ -375,8 +375,8 @@ class CustomDialog extends StatelessWidget {
                   child: RobText(
                     'Current Password',
                     style: GoogleFonts.dmSans(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w600,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
                       color: const Color(0XFF5B5B60),
                       height: 1.6,
                     ),
@@ -402,8 +402,8 @@ class CustomDialog extends StatelessWidget {
                   child: RobText(
                     'New Password',
                     style: GoogleFonts.dmSans(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w600,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
                       color: const Color(0XFF5B5B60),
                       height: 1.6,
                     ),

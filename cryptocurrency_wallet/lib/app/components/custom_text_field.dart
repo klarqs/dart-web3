@@ -118,8 +118,8 @@ class _NormalTextFieldState extends State<NormalTextField> {
         textAlign: TextAlign.start,
         style: bodyText5.copyWith(
           color: grayColor3.withOpacity(.8),
-          fontSize: 14,
-          fontWeight: FontWeight.w600,
+          fontSize: 15,
+          fontWeight: FontWeight.w700,
         ),
         decoration: InputDecoration(
           filled: widget.filled,
@@ -156,9 +156,9 @@ class _NormalTextFieldState extends State<NormalTextField> {
             color: hintTextColor,
           ),
           hintStyle: bodyText6.copyWith(
-            fontSize: 13,
+            fontSize: 14,
             color: hintTextColor,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w600,
             // letterSpacing: 1.1,
           ),
           enabledBorder: _border(textFieldBorderColor),

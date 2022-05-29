@@ -75,8 +75,8 @@ class _LoginState extends State<Login> {
                       child: RobText(
                         'Email Address',
                         style: GoogleFonts.dmSans(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
                           color: const Color(0XFF5B5B60),
                           height: 1.6,
                         ),
@@ -101,8 +101,8 @@ class _LoginState extends State<Login> {
                       child: RobText(
                         'Password',
                         style: GoogleFonts.dmSans(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
                           color: const Color(0XFF5B5B60),
                           height: 1.6,
                         ),
@@ -149,8 +149,8 @@ class _LoginState extends State<Login> {
                             Text(
                               'No account yet? ',
                               style: GoogleFonts.dmSans(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w300,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
                                 color: const Color(0XFF12141F),
                                 height: 1.6,
                               ),
@@ -167,7 +167,7 @@ class _LoginState extends State<Login> {
                               child: Text(
                                 'Sign up',
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 14,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w700,
                                   color: const Color(0XFF52AA82),
                                   height: 1.6,

@@ -43,7 +43,7 @@ class _WelcomeState extends State<Welcome> {
                     child: RobText(
                       'Welcome to your crypto mobile bank',
                       style: GoogleFonts.dmSans(
-                        fontSize: 26,
+                        fontSize: 28,
                         fontWeight: FontWeight.w700,
                         color: const Color(0XFFFFFFFF),
                       ),

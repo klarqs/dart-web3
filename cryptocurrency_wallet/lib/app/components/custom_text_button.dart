@@ -63,7 +63,7 @@ class CustomTextButton extends StatelessWidget {
                     Text(
                       'Processing...',
                       style: bodyText5Bold.copyWith(
-                          fontSize: 14,
+                          fontSize: 15,
                           color: textColor,
                           fontWeight: FontWeight.bold,
                           letterSpacing: .5),
@@ -87,7 +87,7 @@ class CustomTextButton extends StatelessWidget {
                         Text(
                           buttonText,
                           style: bodyText5Bold.copyWith(
-                              fontSize: 14,
+                              fontSize: 15,
                               color: textColor,
                               fontWeight: fontWeight ?? FontWeight.bold,
                               letterSpacing: .5),
@@ -95,7 +95,7 @@ class CustomTextButton extends StatelessWidget {
                         Text(
                           buttonText2,
                           style: bodyText5Bold.copyWith(
-                              fontSize: 14,
+                              fontSize: 15,
                               color: textColor,
                               fontWeight: fontWeight ?? FontWeight.bold),
                         ),

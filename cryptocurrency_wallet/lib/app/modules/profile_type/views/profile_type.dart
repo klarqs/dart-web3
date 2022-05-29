@@ -136,8 +136,8 @@ class _ProfileTypeState extends State<ProfileType> {
               RobText(
                 title,
                 style: GoogleFonts.dmSans(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
                   color: grayColor3,
                   height: 1.6,
                 ),
@@ -146,8 +146,8 @@ class _ProfileTypeState extends State<ProfileType> {
               RobText(
                 description,
                 style: GoogleFonts.dmSans(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w400,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
                   color: grayColor1.withOpacity(.65),
                   height: 1.6,
                 ),

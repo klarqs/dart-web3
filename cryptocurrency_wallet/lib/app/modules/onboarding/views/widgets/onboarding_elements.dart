@@ -35,7 +35,7 @@ Widget OnboardingCard(
             RobText(
               text!,
               style: GoogleFonts.dmSans(
-                fontSize: 26,
+                fontSize: 28,
                 fontWeight: FontWeight.w700,
                 color: const Color(0XFF12141F),
               ),
@@ -46,8 +46,8 @@ Widget OnboardingCard(
               child: RobText(
                 desc!,
                 style: GoogleFonts.dmSans(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
                   color: const Color(0XFF666669),
                   height: 1.6,
                 ),
@@ -96,8 +96,8 @@ Widget WelcomeCard(
               Text(
                 'By clicking "Sign Up", ',
                 style: GoogleFonts.dmSans(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w300,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
                   color: const Color(0XFF12141F),
                   height: 1.6,
                 ),
@@ -105,8 +105,8 @@ Widget WelcomeCard(
               Text(
                 'you agree to ',
                 style: GoogleFonts.dmSans(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w300,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
                   color: const Color(0XFF12141F),
                   height: 1.6,
                 ),
@@ -114,8 +114,8 @@ Widget WelcomeCard(
               Text(
                 'the ',
                 style: GoogleFonts.dmSans(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w300,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
                   color: const Color(0XFF12141F),
                   height: 1.6,
                 ),
@@ -123,7 +123,7 @@ Widget WelcomeCard(
               Text(
                 'Terms of Use ',
                 style: GoogleFonts.dmSans(
-                  fontSize: 14,
+                  fontSize: 15,
                   fontWeight: FontWeight.w700,
                   color: const Color(0XFF52AA82),
                   height: 1.6,
@@ -132,8 +132,8 @@ Widget WelcomeCard(
               Text(
                 'of Apace.',
                 style: GoogleFonts.dmSans(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w300,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
                   color: const Color(0XFF12141F),
                   height: 1.6,
                 ),
@@ -166,8 +166,8 @@ Widget WelcomeCard(
                     Text(
                       'Already have ',
                       style: GoogleFonts.dmSans(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w300,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
                         color: const Color(0XFF12141F),
                         height: 1.6,
                       ),
@@ -175,8 +175,8 @@ Widget WelcomeCard(
                     Text(
                       'an account? ',
                       style: GoogleFonts.dmSans(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w300,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
                         color: const Color(0XFF12141F),
                         height: 1.6,
                       ),
@@ -186,15 +186,15 @@ Widget WelcomeCard(
                       highlightColor: Colors.transparent,
                       onTap: () {
                         Get.to(
-                              () => const Login(),
+                          () => const Login(),
                           transition: Transition.cupertino,
                         );
                       },
                       child: Text(
                         'Login',
                         style: GoogleFonts.dmSans(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w700,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w800,
                           color: const Color(0XFF52AA82),
                           height: 1.6,
                         ),

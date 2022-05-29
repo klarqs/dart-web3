@@ -12,209 +12,210 @@ class DashboardHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        elevation: 0,
-        leadingWidth: 12,
-        centerTitle: false,
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Kolawole",
-              style: GoogleFonts.dmSans(
-                fontSize: 24,
-                fontWeight: FontWeight.w700,
-                color: const Color(0XFF12141F),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(height: 12.0),
+              Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Kolawole",
+                          style: GoogleFonts.dmSans(
+                            fontSize: 34,
+                            letterSpacing: -1,
+                            fontWeight: FontWeight.w800,
+                            color: const Color(0XFF12141F),
+                          ),
+                        ),
+                        Text(
+                          "Good morning, wash your hands ☀️",
+                          style: GoogleFonts.dmSans(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                            color: const Color(0XFF666669),
+                            height: 1.25,
+                          ),
+                        ),
+                      ],
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Get.to(
+                          () => const PersonalInformation(),
+                          transition: Transition.cupertino,
+                        );
+                      },
+                      splashColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      // borderRadius: BorderRadius.circular(50),
+                      // radius: 20,
+                      child: SvgPicture.asset(
+                        'assets/svgs/user_icon_dashboard_home.svg',
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Text(
-              "Good morning, wash your hands ☀️",
-              style: GoogleFonts.dmSans(
-                fontSize: 12,
-                fontWeight: FontWeight.w700,
-                color: const Color(0XFF666669),
-                height: 1.6,
+              Container(
+                margin: const EdgeInsets.only(
+                  left: 24.0,
+                  right: 24.0,
+                  bottom: 8.0,
+                ),
+                padding: const EdgeInsets.all(28.0),
+                width: Get.width,
+                height: 148,
+                decoration: BoxDecoration(
+                  color: apacePrimaryColor,
+                  borderRadius: BorderRadius.circular(24.0),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Available Balance',
+                      style: GoogleFonts.dmSans(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                        height: 1.2,
+                      ),
+                    ),
+                    Text(
+                      '\$0.00',
+                      style: GoogleFonts.dmSans(
+                        fontSize: 32,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.white,
+                        height: 1.6,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 24.0,
+                  right: 24.0,
+                  top: 12.0,
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
+                          children: [
+                            SvgPicture.asset(
+                              'assets/svgs/receive.svg',
+                            ),
+                            const SizedBox(height: 10.0),
+                            Text(
+                              "Receive",
+                              style: GoogleFonts.dmSans(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w700,
+                                color: const Color(0XFF5B5B60),
+                                height: 1.6,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            SvgPicture.asset(
+                              'assets/svgs/purchase.svg',
+                            ),
+                            const SizedBox(height: 10.0),
+                            Text(
+                              "Purchase",
+                              style: GoogleFonts.dmSans(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w700,
+                                color: const Color(0XFF5B5B60),
+                                height: 1.6,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            SvgPicture.asset(
+                              'assets/svgs/withdraw.svg',
+                            ),
+                            const SizedBox(height: 10.0),
+                            Text(
+                              "Withdraw",
+                              style: GoogleFonts.dmSans(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w700,
+                                color: const Color(0XFF5B5B60),
+                                height: 1.6,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 32.0),
+                    Text(
+                      'Assets',
+                      style: GoogleFonts.dmSans(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                        color: const Color(0XFF12141F),
+                      ),
+                    ),
+                    // const SizedBox(height: 4.0),
+                    ListView(
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      children: [
+                        assetCard(
+                          icon: 'assets/svgs/tether.svg',
+                          abbv: 'USDT',
+                          name: "Tether USD",
+                          amount: "USD 0.00",
+                          value: 'USDT 0.00',
+                        ),
+                        assetCard(
+                          icon: 'assets/svgs/usd_coin.svg',
+                          abbv: 'USDC',
+                          name: "US Dollar coin",
+                          amount: "USD 0.00",
+                          value: 'USDC 0.00',
+                        ),
+                        assetCard(
+                          icon: 'assets/svgs/busd.svg',
+                          abbv: 'BUSD',
+                          name: "Binance US Dollar",
+                          amount: "USD 0.00",
+                          value: 'BUSD 0.00',
+                        ),
+                        assetCard(
+                          icon: 'assets/svgs/dai.svg',
+                          abbv: 'DAI',
+                          name: "Dai Stablecoin",
+                          amount: "USD 0.00",
+                          value: 'DAI 0.00',
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 60.0),
+            ],
+          ),
         ),
-        backgroundColor: Colors.white,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 24.0),
-            child: InkWell(
-              onTap: () {
-                Get.to(
-                  () => const PersonalInformation(),
-                  transition: Transition.cupertino,
-                );
-              },
-              splashColor: Colors.transparent,
-              highlightColor: Colors.transparent,
-              // borderRadius: BorderRadius.circular(50),
-              // radius: 20,
-              child: SvgPicture.asset(
-                'assets/svgs/user_icon_dashboard_home.svg',
-              ),
-            ),
-          ),
-        ],
-      ),
-      body: Column(
-        children: [
-          const SizedBox(height: 8.0),
-          Container(
-            margin: const EdgeInsets.only(
-              left: 24.0,
-              right: 24.0,
-              top: 18.0,
-              bottom: 8.0,
-            ),
-            padding: const EdgeInsets.all(28.0),
-            width: Get.width,
-            height: 148,
-            decoration: BoxDecoration(
-              color: apacePrimaryColor,
-              borderRadius: BorderRadius.circular(24.0),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Available Balance',
-                  style: GoogleFonts.dmSans(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white,
-                    height: 1.4,
-                  ),
-                ),
-                Text(
-                  '\$0.00',
-                  style: GoogleFonts.dmSans(
-                    fontSize: 32,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.white,
-                    height: 1.6,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: ListView(
-              physics: const BouncingScrollPhysics(),
-              shrinkWrap: true,
-              padding: const EdgeInsets.only(
-                left: 24.0,
-                right: 24.0,
-                top: 16.0,
-              ),
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Column(
-                      children: [
-                        SvgPicture.asset(
-                          'assets/svgs/receive.svg',
-                        ),
-                        const SizedBox(height: 10.0),
-                        Text(
-                          "Receive",
-                          style: GoogleFonts.dmSans(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w600,
-                            color: const Color(0XFF5B5B60),
-                            height: 1.6,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        SvgPicture.asset(
-                          'assets/svgs/purchase.svg',
-                        ),
-                        const SizedBox(height: 10.0),
-                        Text(
-                          "Purchase",
-                          style: GoogleFonts.dmSans(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w600,
-                            color: const Color(0XFF5B5B60),
-                            height: 1.6,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        SvgPicture.asset(
-                          'assets/svgs/withdraw.svg',
-                        ),
-                        const SizedBox(height: 10.0),
-                        Text(
-                          "Withdraw",
-                          style: GoogleFonts.dmSans(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w600,
-                            color: const Color(0XFF5B5B60),
-                            height: 1.6,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 24.0),
-                Text(
-                  'Assets',
-                  style: GoogleFonts.dmSans(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                    color: const Color(0XFF12141F),
-                  ),
-                ),
-                const SizedBox(height: 8.0),
-                ListView(
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  children: [
-                    assetCard(
-                      icon: 'assets/svgs/tether.svg',
-                      abbv: 'USDT',
-                      name: "Tether USD",
-                      amount: "USD 0.00",
-                      value: 'USDT 0.00',
-                    ),
-                    assetCard(
-                      icon: 'assets/svgs/usd_coin.svg',
-                      abbv: 'USDC',
-                      name: "US Dollar coin",
-                      amount: "USD 0.00",
-                      value: 'USDC 0.00',
-                    ),
-                    assetCard(
-                      icon: 'assets/svgs/busd.svg',
-                      abbv: 'BUSD',
-                      name: "Binance US Dollar",
-                      amount: "USD 0.00",
-                      value: 'BUSD 0.00',
-                    ),
-                    assetCard(
-                      icon: 'assets/svgs/dai.svg',
-                      abbv: 'DAI',
-                      name: "Dai Stablecoin",
-                      amount: "USD 0.00",
-                      value: 'DAI 0.00',
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          )
-        ],
       ),
     );
   }
@@ -258,8 +259,8 @@ class DashboardHome extends StatelessWidget {
                   Text(
                     abbv,
                     style: GoogleFonts.dmSans(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w700,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w800,
                       color: const Color(0XFF282A3D),
                       height: 1.6,
                     ),
@@ -267,8 +268,8 @@ class DashboardHome extends StatelessWidget {
                   Text(
                     name,
                     style: GoogleFonts.dmSans(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w600,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
                       color: const Color(0XFF868686),
                       height: 1.6,
                     ),
@@ -284,8 +285,8 @@ class DashboardHome extends StatelessWidget {
               Text(
                 amount,
                 style: GoogleFonts.dmSans(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w700,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w800,
                   color: const Color(0XFF282A3D),
                   height: 1.6,
                 ),
@@ -293,7 +294,7 @@ class DashboardHome extends StatelessWidget {
               Text(
                 value,
                 style: GoogleFonts.dmSans(
-                  fontSize: 10,
+                  fontSize: 12,
                   fontWeight: FontWeight.w600,
                   color: const Color(0XFF868686),
                   height: 1.6,

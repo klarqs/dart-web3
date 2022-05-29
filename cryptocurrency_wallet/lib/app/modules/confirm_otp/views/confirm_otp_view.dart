@@ -343,7 +343,7 @@ class _ConfirmOTPState extends State<ConfirmOTP> with TickerProviderStateMixin {
                                                     // )
                                                     CircularProgressIndicator(
                                                   color: Colors.white,
-                                                  strokeWidth: 1.4,
+                                                  strokeWidth: 2.4,
                                                 ),
                                               ),
                                             ),
@@ -437,7 +437,8 @@ class _ConfirmOTPState extends State<ConfirmOTP> with TickerProviderStateMixin {
                         }
                       },
                     ),
-                  )
+                  ),
+                  const SizedBox(height: 12.0),
                 ],
               ),
             ),

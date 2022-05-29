@@ -25,7 +25,7 @@ class Countdown extends AnimatedWidget {
           timerText == '00:00' ? 'Didn’t get the mail?' : 'Resend OTP in',
           style: GoogleFonts.dmSans(
             fontSize: 14,
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w600,
             color: const Color(0XFF666669),
             height: 1.6,
           ),
@@ -41,6 +41,7 @@ class Countdown extends AnimatedWidget {
                     style: bodyText5.copyWith(
                       color: apaceAccentColor,
                       fontWeight: FontWeight.w700,
+                      fontSize: 15,
                       height: 1.34,
                       letterSpacing: .8,
                       leadingDistribution: TextLeadingDistribution.even,
@@ -58,6 +59,7 @@ class Countdown extends AnimatedWidget {
                     fontWeight: FontWeight.w600,
                     height: 1.34,
                     letterSpacing: .8,
+                    fontSize: 15,
                     leadingDistribution: TextLeadingDistribution.even,
                   ),
                   textAlign: TextAlign.center,

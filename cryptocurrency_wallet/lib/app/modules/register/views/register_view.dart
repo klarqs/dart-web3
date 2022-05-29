@@ -78,8 +78,8 @@ class _RegisterState extends State<Register> {
                             child: RobText(
                               'First Name',
                               style: GoogleFonts.dmSans(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w600,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w700,
                                 color: const Color(0XFF5B5B60),
                                 height: 1.6,
                               ),
@@ -106,8 +106,8 @@ class _RegisterState extends State<Register> {
                             child: RobText(
                               'Last Name',
                               style: GoogleFonts.dmSans(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w600,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w700,
                                 color: const Color(0XFF5B5B60),
                                 height: 1.6,
                               ),
@@ -135,8 +135,8 @@ class _RegisterState extends State<Register> {
                       child: RobText(
                         'Email Address',
                         style: GoogleFonts.dmSans(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
                           color: const Color(0XFF5B5B60),
                           height: 1.6,
                         ),
@@ -161,8 +161,8 @@ class _RegisterState extends State<Register> {
                       child: RobText(
                         'Phone Number',
                         style: GoogleFonts.dmSans(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
                           color: const Color(0XFF5B5B60),
                           height: 1.6,
                         ),
@@ -194,8 +194,8 @@ class _RegisterState extends State<Register> {
                       child: RobText(
                         'Password',
                         style: GoogleFonts.dmSans(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
                           color: const Color(0XFF5B5B60),
                           height: 1.6,
                         ),
@@ -242,8 +242,8 @@ class _RegisterState extends State<Register> {
                             Text(
                               'Already have ',
                               style: GoogleFonts.dmSans(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w300,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
                                 color: const Color(0XFF12141F),
                                 height: 1.6,
                               ),
@@ -251,8 +251,8 @@ class _RegisterState extends State<Register> {
                             Text(
                               'an account? ',
                               style: GoogleFonts.dmSans(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w300,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
                                 color: const Color(0XFF12141F),
                                 height: 1.6,
                               ),
@@ -269,7 +269,7 @@ class _RegisterState extends State<Register> {
                               child: Text(
                                 'Log in',
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 14,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w700,
                                   color: const Color(0XFF52AA82),
                                   height: 1.6,

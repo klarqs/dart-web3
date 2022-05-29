@@ -7,9 +7,9 @@ import 'package:google_fonts/google_fonts.dart';
 final h1Text = GoogleFonts.dmSans(
     fontSize: 35, fontWeight: FontWeight.w800, letterSpacing: .5);
 final bodyText7 = GoogleFonts.dmSans(
-    fontSize: 10, fontWeight: FontWeight.w400, letterSpacing: .4);
+    fontSize: 14, fontWeight: FontWeight.w400, letterSpacing: .4);
 final bodyText6 = GoogleFonts.dmSans(
-    fontSize: 12.5,
+    fontSize: 16.5,
     fontWeight: FontWeight.w400,
     letterSpacing: .4,
     color: grayColor2);
