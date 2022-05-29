@@ -29,7 +29,7 @@ class DashboardHome extends StatelessWidget {
                         Text(
                           "Kolawole",
                           style: GoogleFonts.dmSans(
-                            fontSize: 34,
+                            fontSize: 28,
                             letterSpacing: -1,
                             fontWeight: FontWeight.w800,
                             color: const Color(0XFF12141F),
@@ -38,10 +38,10 @@ class DashboardHome extends StatelessWidget {
                         Text(
                           "Good morning, wash your hands ☀️",
                           style: GoogleFonts.dmSans(
-                            fontSize: 15,
+                            fontSize: 14,
                             fontWeight: FontWeight.w700,
                             color: const Color(0XFF666669),
-                            height: 1.25,
+                            height: 1.4,
                           ),
                         ),
                       ],
@@ -108,6 +108,7 @@ class DashboardHome extends StatelessWidget {
                   top: 12.0,
                 ),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
