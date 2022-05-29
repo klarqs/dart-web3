@@ -7,11 +7,13 @@ class GradientCircularProgressIndicator extends StatelessWidget {
   final List<Color>? gradientColors;
   final double strokeWidth;
 
-  const GradientCircularProgressIndicator({
+  // ignore: prefer_const_constructors_in_immutables
+  GradientCircularProgressIndicator({
+    Key? key,
     @required this.radius,
     @required this.gradientColors,
     this.strokeWidth = 10.0,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

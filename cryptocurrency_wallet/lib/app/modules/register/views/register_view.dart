@@ -53,7 +53,7 @@ class _RegisterState extends State<Register> {
                   'Create an account to start accepting crypto payments from customers globally',
                   style: GoogleFonts.dmSans(
                     fontSize: 14,
-                    fontWeight: FontWeight.w400,
+                    fontWeight: FontWeight.w700,
                     color: const Color(0XFF666669),
                     height: 1.6,
                   ),
@@ -222,7 +222,7 @@ class _RegisterState extends State<Register> {
                           CustomTextButton(
                             onPressed: () {
                               Get.to(
-                                    () => const ConfirmOTP(),
+                                () => const ConfirmOTP(),
                                 transition: Transition.cupertino,
                               );
                             },
@@ -262,7 +262,7 @@ class _RegisterState extends State<Register> {
                               highlightColor: Colors.transparent,
                               onTap: () {
                                 Get.off(
-                                      () => const Login(),
+                                  () => const Login(),
                                   transition: Transition.cupertino,
                                 );
                               },

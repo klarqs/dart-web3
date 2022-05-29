@@ -1,3 +1,4 @@
+import 'package:cryptocurrency_wallet/app/modules/dashboard_bottom_tabs/views/dashboard_bottom_tabs_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -52,7 +53,7 @@ class _LoginState extends State<Login> {
                   'Please enter your account details',
                   style: GoogleFonts.dmSans(
                     fontSize: 14,
-                    fontWeight: FontWeight.w400,
+                    fontWeight: FontWeight.w700,
                     color: const Color(0XFF666669),
                     height: 1.6,
                   ),
@@ -126,7 +127,12 @@ class _LoginState extends State<Login> {
                         direction: Axis.horizontal,
                         children: [
                           CustomTextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.to(
+                                () => const DashboardBottomTabs(),
+                                transition: Transition.cupertino,
+                              );
+                            },
                             buttonText: 'Sign in',
                           ),
                         ],

@@ -82,7 +82,7 @@ class _ConfirmOTPState extends State<ConfirmOTP> with TickerProviderStateMixin {
                   'A 6-digit confirmation code was sent to your email address, please enter below',
                   style: GoogleFonts.dmSans(
                     fontSize: 14,
-                    fontWeight: FontWeight.w400,
+                    fontWeight: FontWeight.w700,
                     color: const Color(0XFF666669),
                     height: 1.6,
                   ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../constants/colors.dart';
@@ -26,6 +25,8 @@ class NormalTextField extends StatefulWidget {
     this.labelText,
     this.onTap,
     this.isUnique,
+    this.focusedBorderColor = apacePrimaryColor,
+    this.filled = false,
   }) : super(key: key);
 
   final double? width;
@@ -45,6 +46,8 @@ class NormalTextField extends StatefulWidget {
   final void Function()? onTap;
   final Widget? prefixIcon;
   final bool? isUnique;
+  final Color focusedBorderColor;
+  final bool filled;
 
   @override
   State<NormalTextField> createState() => _NormalTextFieldState();
@@ -103,7 +106,7 @@ class _NormalTextFieldState extends State<NormalTextField> {
         textInputAction: widget.textInputAction,
         textCapitalization: widget.textCapitalization,
         enableInteractiveSelection: true,
-        onTap: () => FocusScope.of(context).unfocus(),
+        // onTap: () => FocusScope.of(context).unfocus(),
         onChanged: _onChanged,
         onSaved: widget.onSaved,
         // cursorHeight: .4,
@@ -119,6 +122,8 @@ class _NormalTextFieldState extends State<NormalTextField> {
           fontWeight: FontWeight.w600,
         ),
         decoration: InputDecoration(
+          filled: widget.filled,
+          fillColor: const Color(0XFFEBEBEB),
           prefixIcon: widget.prefixIcon,
           suffixIcon: widget.isPasswordField
               ? PasswordSuffixWidget(
@@ -157,7 +162,7 @@ class _NormalTextFieldState extends State<NormalTextField> {
             // letterSpacing: 1.1,
           ),
           enabledBorder: _border(textFieldBorderColor),
-          focusedBorder: _border(apacePrimaryColor),
+          focusedBorder: _border(widget.focusedBorderColor),
           errorBorder: _border(Colors.red),
           focusedErrorBorder: _border(Colors.red),
         ),

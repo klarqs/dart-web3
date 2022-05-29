@@ -4,6 +4,7 @@ import '../../../../constants/colors.dart';
 import '../../../../constants/text_styles.dart';
 
 class Countdown extends AnimatedWidget {
+  // ignore: use_key_in_widget_constructors
   const Countdown({
     required this.animation,
     required this.onPressed,
@@ -21,9 +22,7 @@ class Countdown extends AnimatedWidget {
     return Column(
       children: [
         Text(
-          timerText == '00:00'
-              ? 'Didn’t get the mail?'
-              : 'Resend OTP in',
+          timerText == '00:00' ? 'Didn’t get the mail?' : 'Resend OTP in',
           style: GoogleFonts.dmSans(
             fontSize: 14,
             fontWeight: FontWeight.w400,

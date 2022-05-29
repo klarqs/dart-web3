@@ -1,7 +1,9 @@
 import 'package:cryptocurrency_wallet/app/components/spaces_widget.dart';
 import 'package:cryptocurrency_wallet/app/constants/colors.dart';
+import 'package:cryptocurrency_wallet/app/modules/dashboard_bottom_tabs/views/dashboard_bottom_tabs_view.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../components/custom_text_button.dart';
@@ -46,7 +48,7 @@ class _ProfileTypeState extends State<ProfileType> {
                       'What type of business do you own?',
                       style: GoogleFonts.dmSans(
                         fontSize: 14,
-                        fontWeight: FontWeight.w400,
+                        fontWeight: FontWeight.w700,
                         color: const Color(0XFF666669),
                         height: 1.6,
                       ),
@@ -83,10 +85,10 @@ class _ProfileTypeState extends State<ProfileType> {
                   children: [
                     CustomTextButton(
                       onPressed: () {
-                        // Get.to(
-                        //       () => const ConfirmOTP(),
-                        //   transition: Transition.cupertino,
-                        // );
+                        Get.to(
+                          () => const DashboardBottomTabs(),
+                          transition: Transition.cupertino,
+                        );
                       },
                       buttonText: 'Create Profile',
                     ),
