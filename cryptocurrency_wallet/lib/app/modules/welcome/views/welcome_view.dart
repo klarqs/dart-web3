@@ -1,6 +1,7 @@
 import 'package:cryptocurrency_wallet/app/modules/onboarding/views/widgets/onboarding_elements.dart';
 import 'package:cryptocurrency_wallet/app/modules/register/views/register_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Welcome extends StatefulWidget {
@@ -42,7 +43,7 @@ class _WelcomeState extends State<Welcome> {
                     child: RobText(
                       'Welcome to your crypto mobile bank',
                       style: GoogleFonts.dmSans(
-                        fontSize: 26,
+                        fontSize: 28,
                         fontWeight: FontWeight.w700,
                         color: const Color(0XFFFFFFFF),
                       ),
@@ -55,10 +56,9 @@ class _WelcomeState extends State<Welcome> {
                   WelcomeCard(
                     context,
                     onPressed: () => {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => const Register(),
-                        ),
+                      Get.to(
+                        () => const Register(),
+                        transition: Transition.cupertino,
                       ),
                     },
                   ),

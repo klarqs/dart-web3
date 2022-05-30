@@ -1,10 +1,12 @@
 import 'package:cryptocurrency_wallet/app/modules/login/views/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../components/custom_text_button.dart';
 import '../../../components/custom_text_field.dart';
+import '../../confirm_otp/views/confirm_otp_view.dart';
 import '../../onboarding/views/widgets/onboarding_elements.dart';
 
 class Register extends StatefulWidget {
@@ -18,6 +20,7 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -50,7 +53,7 @@ class _RegisterState extends State<Register> {
                   'Create an account to start accepting crypto payments from customers globally',
                   style: GoogleFonts.dmSans(
                     fontSize: 14,
-                    fontWeight: FontWeight.w400,
+                    fontWeight: FontWeight.w700,
                     color: const Color(0XFF666669),
                     height: 1.6,
                   ),
@@ -75,8 +78,8 @@ class _RegisterState extends State<Register> {
                             child: RobText(
                               'First Name',
                               style: GoogleFonts.dmSans(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w600,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w700,
                                 color: const Color(0XFF5B5B60),
                                 height: 1.6,
                               ),
@@ -88,6 +91,7 @@ class _RegisterState extends State<Register> {
                             hintText: "Enter first name",
                             textCapitalization: TextCapitalization.words,
                             keyboardType: TextInputType.name,
+                            textInputAction: TextInputAction.next,
                           ),
                         ],
                       ),
@@ -102,8 +106,8 @@ class _RegisterState extends State<Register> {
                             child: RobText(
                               'Last Name',
                               style: GoogleFonts.dmSans(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w600,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w700,
                                 color: const Color(0XFF5B5B60),
                                 height: 1.6,
                               ),
@@ -115,6 +119,7 @@ class _RegisterState extends State<Register> {
                             hintText: "Enter last name",
                             textCapitalization: TextCapitalization.words,
                             keyboardType: TextInputType.name,
+                            textInputAction: TextInputAction.next,
                           ),
                         ],
                       ),
@@ -130,8 +135,8 @@ class _RegisterState extends State<Register> {
                       child: RobText(
                         'Email Address',
                         style: GoogleFonts.dmSans(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
                           color: const Color(0XFF5B5B60),
                           height: 1.6,
                         ),
@@ -143,6 +148,7 @@ class _RegisterState extends State<Register> {
                       hintText: "Enter email address",
                       textCapitalization: TextCapitalization.none,
                       keyboardType: TextInputType.emailAddress,
+                      textInputAction: TextInputAction.next,
                     ),
                   ],
                 ),
@@ -155,8 +161,8 @@ class _RegisterState extends State<Register> {
                       child: RobText(
                         'Phone Number',
                         style: GoogleFonts.dmSans(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
                           color: const Color(0XFF5B5B60),
                           height: 1.6,
                         ),
@@ -168,6 +174,7 @@ class _RegisterState extends State<Register> {
                       hintText: "Enter phone number",
                       textCapitalization: TextCapitalization.none,
                       keyboardType: TextInputType.phone,
+                      textInputAction: TextInputAction.next,
                       prefixIcon: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: Image.asset(
@@ -187,8 +194,8 @@ class _RegisterState extends State<Register> {
                       child: RobText(
                         'Password',
                         style: GoogleFonts.dmSans(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
                           color: const Color(0XFF5B5B60),
                           height: 1.6,
                         ),
@@ -201,6 +208,7 @@ class _RegisterState extends State<Register> {
                       textCapitalization: TextCapitalization.none,
                       keyboardType: TextInputType.visiblePassword,
                       isPasswordField: true,
+                      textInputAction: TextInputAction.done,
                     ),
                   ],
                 ),
@@ -212,7 +220,12 @@ class _RegisterState extends State<Register> {
                         direction: Axis.horizontal,
                         children: [
                           CustomTextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.to(
+                                () => const ConfirmOTP(),
+                                transition: Transition.cupertino,
+                              );
+                            },
                             buttonText: 'Sign Up',
                           ),
                         ],
@@ -229,8 +242,8 @@ class _RegisterState extends State<Register> {
                             Text(
                               'Already have ',
                               style: GoogleFonts.dmSans(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w300,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
                                 color: const Color(0XFF12141F),
                                 height: 1.6,
                               ),
@@ -238,8 +251,8 @@ class _RegisterState extends State<Register> {
                             Text(
                               'an account? ',
                               style: GoogleFonts.dmSans(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w300,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
                                 color: const Color(0XFF12141F),
                                 height: 1.6,
                               ),
@@ -248,16 +261,15 @@ class _RegisterState extends State<Register> {
                               splashColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (context) => const Login(),
-                                  ),
+                                Get.off(
+                                  () => const Login(),
+                                  transition: Transition.cupertino,
                                 );
                               },
                               child: Text(
                                 'Log in',
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 14,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w700,
                                   color: const Color(0XFF52AA82),
                                   height: 1.6,

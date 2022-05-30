@@ -1,5 +1,7 @@
+import 'package:cryptocurrency_wallet/app/modules/dashboard_bottom_tabs/views/dashboard_bottom_tabs_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../components/custom_text_button.dart';
@@ -18,6 +20,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -50,7 +53,7 @@ class _LoginState extends State<Login> {
                   'Please enter your account details',
                   style: GoogleFonts.dmSans(
                     fontSize: 14,
-                    fontWeight: FontWeight.w400,
+                    fontWeight: FontWeight.w700,
                     color: const Color(0XFF666669),
                     height: 1.6,
                   ),
@@ -72,8 +75,8 @@ class _LoginState extends State<Login> {
                       child: RobText(
                         'Email Address',
                         style: GoogleFonts.dmSans(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
                           color: const Color(0XFF5B5B60),
                           height: 1.6,
                         ),
@@ -85,6 +88,7 @@ class _LoginState extends State<Login> {
                       hintText: "Enter email address",
                       textCapitalization: TextCapitalization.none,
                       keyboardType: TextInputType.emailAddress,
+                      textInputAction: TextInputAction.next,
                     ),
                   ],
                 ),
@@ -97,8 +101,8 @@ class _LoginState extends State<Login> {
                       child: RobText(
                         'Password',
                         style: GoogleFonts.dmSans(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
                           color: const Color(0XFF5B5B60),
                           height: 1.6,
                         ),
@@ -110,6 +114,7 @@ class _LoginState extends State<Login> {
                       hintText: 'Min. of 8 characters',
                       textCapitalization: TextCapitalization.none,
                       keyboardType: TextInputType.visiblePassword,
+                      textInputAction: TextInputAction.done,
                       isPasswordField: true,
                     ),
                   ],
@@ -122,7 +127,12 @@ class _LoginState extends State<Login> {
                         direction: Axis.horizontal,
                         children: [
                           CustomTextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.to(
+                                () => const DashboardBottomTabs(),
+                                transition: Transition.cupertino,
+                              );
+                            },
                             buttonText: 'Sign in',
                           ),
                         ],
@@ -139,8 +149,8 @@ class _LoginState extends State<Login> {
                             Text(
                               'No account yet? ',
                               style: GoogleFonts.dmSans(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w300,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
                                 color: const Color(0XFF12141F),
                                 height: 1.6,
                               ),
@@ -149,16 +159,15 @@ class _LoginState extends State<Login> {
                               splashColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (context) => const Register(),
-                                  ),
+                                Get.off(
+                                  () => const Register(),
+                                  transition: Transition.cupertino,
                                 );
                               },
                               child: Text(
                                 'Sign up',
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 14,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w700,
                                   color: const Color(0XFF52AA82),
                                   height: 1.6,

@@ -25,6 +25,8 @@ class NormalTextField extends StatefulWidget {
     this.labelText,
     this.onTap,
     this.isUnique,
+    this.focusedBorderColor = apacePrimaryColor,
+    this.filled = false,
   }) : super(key: key);
 
   final double? width;
@@ -44,6 +46,8 @@ class NormalTextField extends StatefulWidget {
   final void Function()? onTap;
   final Widget? prefixIcon;
   final bool? isUnique;
+  final Color focusedBorderColor;
+  final bool filled;
 
   @override
   State<NormalTextField> createState() => _NormalTextFieldState();
@@ -102,7 +106,7 @@ class _NormalTextFieldState extends State<NormalTextField> {
         textInputAction: widget.textInputAction,
         textCapitalization: widget.textCapitalization,
         enableInteractiveSelection: true,
-        onTap: widget.onTap,
+        // onTap: () => FocusScope.of(context).unfocus(),
         onChanged: _onChanged,
         onSaved: widget.onSaved,
         // cursorHeight: .4,
@@ -114,10 +118,12 @@ class _NormalTextFieldState extends State<NormalTextField> {
         textAlign: TextAlign.start,
         style: bodyText5.copyWith(
           color: grayColor3.withOpacity(.8),
-          fontSize: 14,
-          fontWeight: FontWeight.w600,
+          fontSize: 15,
+          fontWeight: FontWeight.w700,
         ),
         decoration: InputDecoration(
+          filled: widget.filled,
+          fillColor: const Color(0XFFEBEBEB),
           prefixIcon: widget.prefixIcon,
           suffixIcon: widget.isPasswordField
               ? PasswordSuffixWidget(
@@ -150,13 +156,13 @@ class _NormalTextFieldState extends State<NormalTextField> {
             color: hintTextColor,
           ),
           hintStyle: bodyText6.copyWith(
-            fontSize: 13,
+            fontSize: 14,
             color: hintTextColor,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w600,
             // letterSpacing: 1.1,
           ),
           enabledBorder: _border(textFieldBorderColor),
-          focusedBorder: _border(apacePrimaryColor),
+          focusedBorder: _border(widget.focusedBorderColor),
           errorBorder: _border(Colors.red),
           focusedErrorBorder: _border(Colors.red),
         ),
@@ -184,7 +190,7 @@ class PasswordSuffixWidget extends StatelessWidget {
       onTap: onPressed,
       child: SvgPicture.asset(
         obscureText ? 'assets/svgs/eye-slash.svg' : 'assets/svgs/eye.svg',
-        height: 12,
+        height: 10,
       ),
     );
   }

@@ -2,6 +2,7 @@ import 'package:cryptocurrency_wallet/app/modules/onboarding/views/widgets/onboa
 import 'package:cryptocurrency_wallet/app/modules/welcome/views/welcome_view.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Onboarding extends StatefulWidget {
@@ -22,11 +23,7 @@ class _OnboardingState extends State<Onboarding> {
       () {
         if (pageController.positions.isNotEmpty) {
           if (pageController.page == 2.0) {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => const Welcome(),
-              ),
-            );
+            Get.to(() =>  const Welcome(), transition: Transition.cupertino);
           } else {
             if (pageController.page == 0.0 - 1) {
               page1Color = currentPageColor;
