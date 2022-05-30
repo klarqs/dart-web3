@@ -1,6 +1,8 @@
 import 'package:cryptocurrency_wallet/app/constants/colors.dart';
+import 'package:cryptocurrency_wallet/app/modules/customers/views/customers_view.dart';
 import 'package:cryptocurrency_wallet/app/modules/dashboard_home/views/dashboard_home_view.dart';
 import 'package:cryptocurrency_wallet/app/modules/more/views/more_view.dart';
+import 'package:cryptocurrency_wallet/app/modules/payment_links/views/payment_links_view.dart';
 import 'package:cryptocurrency_wallet/app/modules/transaction_history/views/transaction_history_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -31,16 +33,16 @@ class _DashboardBottomTabsState extends State<DashboardBottomTabs> {
       "widget": const DashboardHome(),
     });
     _children.add({
-      "title": "Leaderboard",
+      "title": "History",
       "widget": const TransactionHistory(),
     });
     _children.add({
-      "title": "Wallet",
-      "widget": Container(),
+      "title": "Links",
+      "widget": const PaymentLinks(),
     });
     _children.add({
-      "title": "E-shop",
-      "widget": Container(),
+      "title": "Customers",
+      "widget": const Customers(),
     });
     _children.add({
       "title": "More",
@@ -58,6 +60,7 @@ class _DashboardBottomTabsState extends State<DashboardBottomTabs> {
       bottomNavigationBar: Theme(
         data: ThemeData(
           splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
         ),
         child: BottomNavigationBar(
           selectedItemColor: apacePrimaryColor,
@@ -111,7 +114,7 @@ class _DashboardBottomTabsState extends State<DashboardBottomTabs> {
                     ? apacePrimaryColor
                     : const Color(0xffBDBDC5),
               ),
-              label: 'Link',
+              label: 'Links',
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
