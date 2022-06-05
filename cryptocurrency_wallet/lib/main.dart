@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       builder: BotToastInit(),
       title: 'Apace',
+     
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
