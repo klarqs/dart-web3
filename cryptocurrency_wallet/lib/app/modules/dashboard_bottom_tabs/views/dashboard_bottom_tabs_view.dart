@@ -51,7 +51,6 @@ class _DashboardBottomTabsState extends State<DashboardBottomTabs> {
     _currentIndex = widget.tabIndex;
     super.initState();
   }
-
   
   @override
   Widget build(BuildContext context) {
