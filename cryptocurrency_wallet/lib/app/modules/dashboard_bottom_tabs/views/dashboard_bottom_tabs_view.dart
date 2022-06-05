@@ -9,6 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 
 class DashboardBottomTabs extends StatefulWidget {
+  
   final int tabIndex;
   final bool isGuestUser;
   const DashboardBottomTabs({
